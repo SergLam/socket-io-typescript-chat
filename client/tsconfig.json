@@ -1,6 +1,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "files": [
+      "index.ts",
+      "src/*.ts",
+      "src/model/*.ts"
+    ],
+    "noImplicitAny": true,
     "outDir": "./dist/out-tsc",
     "baseUrl": "src",
     "sourceMap": true,
@@ -8,13 +14,23 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "suppressImplicitAnyIndexErrors": true, // Don't forget to add the comma here.
+    "target": "es6",
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": ["node", "reflect-metadata"],
     "lib": [
-      "es2016",
-      "dom"
+      "es2017",
+      "dom",
+      "dom.iterable",
+      "es2015.iterable",
+      "es2015.promise",
+      "es2015.symbol",
+      "es2015.symbol.wellknown"
+    ],
+    "exclude": [
+      "node_modules"
     ]
   }
 }
