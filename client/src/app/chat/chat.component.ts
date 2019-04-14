@@ -107,7 +107,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
     });
   }
 
-  private openUserPopup(params): void {
+  private openUserPopup(params: any): void {
     this.dialogRef = this.dialog.open(DialogUserComponent, params);
     this.dialogRef.afterClosed().subscribe(paramsDialog => {
       if (!paramsDialog) {

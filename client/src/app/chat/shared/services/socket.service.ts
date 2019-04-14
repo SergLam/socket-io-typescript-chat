@@ -10,7 +10,7 @@ const SERVER_URL = 'http://localhost:8080';
 
 @Injectable()
 export class SocketService {
-    private socket;
+    private socket: any;
 
     public initSocket(): void {
         this.socket = socketIo(SERVER_URL);

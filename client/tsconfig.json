@@ -1,11 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "files": [
-      "index.ts",
-      "src/*.ts",
-      "src/model/*.ts"
-    ],
+
     "noImplicitAny": true,
     "outDir": "./dist/out-tsc",
     "baseUrl": "src",
@@ -28,9 +24,15 @@
       "es2015.promise",
       "es2015.symbol",
       "es2015.symbol.wellknown"
-    ],
-    "exclude": [
-      "node_modules"
     ]
-  }
+
+  },
+  "files": [
+    "index.ts",
+    "src/*.ts",
+    "src/model/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
